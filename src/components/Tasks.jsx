@@ -1,4 +1,4 @@
-import { ChevronRightIcon, TrashIcon } from "lucide-react";
+import { CheckIcon, TrashIcon, ChevronRightIcon } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import Button from "./Button";
 function Tasks({ tasks, onTaskClick, onDeleteTaskClick }) {
@@ -20,6 +20,7 @@ function Tasks({ tasks, onTaskClick, onDeleteTaskClick }) {
               task.isCompleted && "line-through"
             } `}
           >
+            {task.isCompleted && <CheckIcon className="inline mr-2" />}
             {task.title}
           </button>
 
